@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ahsan from "../public/Ahsan.jpeg";
-import centrality from "../public/centrality.png";
+import centrality from "../public/Centrality.png";
 import texttospeech from "../public/texttospeech.png";
 import WeatherApp from "../public/WeatherApp.png";
 import Centrality from "../public/Centrality (9).png";
