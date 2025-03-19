@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ahsan from "./assets/Ahsan.jpeg";
-import centrality from "./assets/centrality.png"
+
 import texttospeech from "./assets/texttospeech.png";
 import WeatherApp from "./assets/WeatherApp.png";
 import Centrality9 from "./assets/Centrality (9).png";
@@ -24,14 +24,6 @@ const Portfolio = () => {
   
   // Project data - original projects
   const originalProjects = [
-    {
-      id: 1,
-      title: 'Centrality',
-      url: 'https://mycentrality.org/',
-      image: centrality,
-      category: 'fullstack',
-      description: 'A comprehensive platform built with MERN stack'
-    },
     {
       id: 3,
       title: 'Text-to-Speech App',
