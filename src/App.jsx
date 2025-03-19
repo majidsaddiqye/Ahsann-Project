@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import ahsan from "../public/Ahsan.jpeg";
-import Centrality from "../public/Centrality.png"
-import texttospeech from "../public/texttospeech.png";
-import WeatherApp from "../public/WeatherApp.png";
-import Centrality9 from "../public/Centrality (9).png";
-import Centrality8 from "../public/Centrality (8).png";
-import Centrality7 from "../public/Centrality (7).png";
-import Centrality6 from "../public/Centrality (6).png";
-import Centrality5 from "../public/Centrality (5).png";
-import Centrality4 from "../public/Centrality (4).png";
-import Centrality3 from "../public/Centrality (3).png";
-import About from "../public/About.jpg";
-import Gameree from "../public/Gameree.png";
-import Mono from "../public/Mono.png";
-import Nft from "../public/Nft.png";
-import NitroEx from "../public/NitroEx.png";
-import Paritex from "../public/Paritex.png";
-import Soldex from "../public/Soldex.png";
+import ahsan from "./assets/Ahsan.jpeg";
+import Centrality from "./assets/Centrality.png"
+import texttospeech from "./assets/texttospeech.png";
+import WeatherApp from "./assets/WeatherApp.png";
+import Centrality9 from "./assets/Centrality (9).png";
+import Centrality8 from "./assets/Centrality (8).png";
+import Centrality7 from "./assets/Centrality (7).png";
+import Centrality6 from "./assets/Centrality (6).png";
+import Centrality5 from "./assets/Centrality (5).png";
+import Centrality4 from "./assets/Centrality (4).png";
+import Centrality3 from "./assets/Centrality (3).png";
+import About from "./assets/About.jpg";
+import Gameree from "./assets/Gameree.png";
+import Mono from "./assets/Mono.png";
+import Nft from "./assets/Nft.png";
+import NitroEx from "./assets/NitroEx.png";
+import Paritex from "./assets/Paritex.png";
+import Soldex from "./assets/Soldex.png";
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState('all');
   const [isVisible, setIsVisible] = useState({});
