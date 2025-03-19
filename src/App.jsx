@@ -4,7 +4,7 @@ import ahsan from "../public/Ahsan.jpeg";
 import Centrality from "../public/Centrality.png"
 import texttospeech from "../public/texttospeech.png";
 import WeatherApp from "../public/WeatherApp.png";
-import Centrality from "../public/Centrality (9).png";
+import Centrality9 from "../public/Centrality (9).png";
 import Centrality8 from "../public/Centrality (8).png";
 import Centrality7 from "../public/Centrality (7).png";
 import Centrality6 from "../public/Centrality (6).png";
@@ -100,7 +100,7 @@ const Portfolio = () => {
       id: 11,
       title: 'Supper Octo',
       url: 'https://supper-octo.netlify.app/NewProject',
-      image: Centrality,
+      image: Centrality9,
       category: 'frontend',
       description: 'Interactive web application with modern UI/UX'
     },
