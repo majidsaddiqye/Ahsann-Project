@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ahsan from "../public/Ahsan.jpeg";
-import centrality from "../public/Centrality.png";
+import centrality from "../public/centrality.png";
 import texttospeech from "../public/texttospeech.png";
 import WeatherApp from "../public/WeatherApp.png";
 import Centrality from "../public/Centrality (9).png";
@@ -12,12 +12,18 @@ import Centrality5 from "../public/Centrality (5).png";
 import Centrality4 from "../public/Centrality (4).png";
 import Centrality3 from "../public/Centrality (3).png";
 import About from "../public/About.jpg";
+import Gameree from "../public/Gameree.png";
+import Mono from "../public/Mono.png";
+import Nft from "../public/Nft.png";
+import NitroEx from "../public/NitroEx.png";
+import Paritex from "../public/Paritex.png";
+import Soldex from "../public/Soldex.png";
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState('all');
   const [isVisible, setIsVisible] = useState({});
   
-  // Project data
-  const projects = [
+  // Project data - original projects
+  const originalProjects = [
     {
       id: 1,
       title: 'Centrality',
@@ -100,6 +106,62 @@ const Portfolio = () => {
     },
   ];
 
+  // Add new blockchain projects
+  const blockchainProjects = [
+    {
+      id: 12,
+      title: 'MonoX Finance',
+      url: 'https://monox.finance/home',
+      image: Mono,
+      category: 'blockchain',
+      description: 'DEX protocol with single-sided liquidity pools'
+    },
+    {
+      id: 13,
+      title: 'Soldex.ai',
+      url: 'https://soldex.ai/',
+      image: Soldex,
+      category: 'blockchain',
+      description: 'Decentralized exchange platform built on Solana'
+    },
+  
+    {
+      id: 17,
+      title: 'NFT Viewer',
+      url: 'https://www.nftviewer.xyz/',
+      image: Nft,
+      category: 'nft',
+      description: 'Platform for viewing and managing NFT collections'
+    },
+    {
+      id: 18,
+      title: 'Gameree',
+      url: 'https://app.gameree.net/',
+      image: Gameree,
+      category: 'nft',
+      description: 'NFT gaming platform with marketplace integration'
+    },
+    {
+      id: 19,
+      title: 'Paritex Exchange',
+      url: 'https://www.paritex.com/',
+      image: Paritex,
+      category: 'exchange',
+      description: 'Cryptocurrency exchange with advanced trading features'
+    },
+    {
+      id: 20,
+      title: 'NitroEx',
+      url: 'https://www.nitroex.io/',
+      image: NitroEx,
+      category: 'exchange',
+      description: 'Fast, secure cryptocurrency exchange platform'
+    },
+  ];
+
+  // Combine all projects
+  const projects = [...originalProjects, ...blockchainProjects];
+
   // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -161,10 +223,10 @@ const Portfolio = () => {
           >
             <h1 className="text-5xl sm:text-6xl font-bold mb-4 text-white leading-tight">
               <span className="block">Ahsan Saeed</span>
-              <span className="text-gray-400 font-light">MERN Stack Developer</span>
+              <span className="text-gray-400 font-light">Full Stack & Blockchain Developer</span>
             </h1>
             <p className="text-xl mb-8 text-gray-300 leading-relaxed max-w-xl">
-              Crafting elegant web applications with modern technologies and a focus on performance, scalability, and user experience.
+              Crafting elegant web applications and blockchain solutions with modern technologies and a focus on performance, scalability, and user experience.
             </p>
             <div className="flex flex-wrap">
               <a 
@@ -236,22 +298,22 @@ const Portfolio = () => {
               variants={fadeInUp}
               transition={{ delay: 0.4 }}
             >
-              <h3 className="text-3xl font-bold mb-6 text-gray-900">Full-Stack Developer</h3>
+              <h3 className="text-3xl font-bold mb-6 text-gray-900">Full-Stack & Blockchain Developer</h3>
               <p className="mb-6 text-gray-600 leading-relaxed">
-                I'm a professional full-stack developer with expertise in the MERN stack, delivering robust and scalable web applications for clients across various industries. My approach combines technical proficiency with meticulous attention to detail.
+                I'm a professional developer with 16+ years of experience, delivering robust and scalable web applications and blockchain solutions for clients across various industries. My approach combines technical proficiency with meticulous attention to detail.
               </p>
               <p className="mb-8 text-gray-600 leading-relaxed">
-                Specializing in creating responsive, user-centered applications with clean architecture and optimized performance. My commitment to code quality and continuous learning ensures that I remain at the forefront of modern web development practices.
+                Specializing in creating responsive, user-centered applications with clean architecture and optimized performance. From MERN stack to blockchain development, my commitment to code quality and continuous learning ensures that I remain at the forefront of modern development practices.
               </p>
               <div className="flex flex-wrap">
                 <span className="bg-gray-100 text-gray-800 px-4 py-2 rounded-none text-sm font-medium mr-3 mb-3 border border-gray-200">MongoDB</span>
                 <span className="bg-gray-100 text-gray-800 px-4 py-2 rounded-none text-sm font-medium mr-3 mb-3 border border-gray-200">Express.js</span>
                 <span className="bg-gray-100 text-gray-800 px-4 py-2 rounded-none text-sm font-medium mr-3 mb-3 border border-gray-200">React.js</span>
                 <span className="bg-gray-100 text-gray-800 px-4 py-2 rounded-none text-sm font-medium mr-3 mb-3 border border-gray-200">Node.js</span>
-                <span className="bg-gray-100 text-gray-800 px-4 py-2 rounded-none text-sm font-medium mr-3 mb-3 border border-gray-200">Tailwind CSS</span>
-                <span className="bg-gray-100 text-gray-800 px-4 py-2 rounded-none text-sm font-medium mr-3 mb-3 border border-gray-200">RESTful APIs</span>
-                <span className="bg-gray-100 text-gray-800 px-4 py-2 rounded-none text-sm font-medium mr-3 mb-3 border border-gray-200">JavaScript</span>
-                <span className="bg-gray-100 text-gray-800 px-4 py-2 rounded-none text-sm font-medium mr-3 mb-3 border border-gray-200">TypeScript</span>
+                <span className="bg-gray-100 text-gray-800 px-4 py-2 rounded-none text-sm font-medium mr-3 mb-3 border border-gray-200">Solidity</span>
+                <span className="bg-gray-100 text-gray-800 px-4 py-2 rounded-none text-sm font-medium mr-3 mb-3 border border-gray-200">Web3</span>
+                <span className="bg-gray-100 text-gray-800 px-4 py-2 rounded-none text-sm font-medium mr-3 mb-3 border border-gray-200">Smart Contracts</span>
+                <span className="bg-gray-100 text-gray-800 px-4 py-2 rounded-none text-sm font-medium mr-3 mb-3 border border-gray-200">NFTs</span>
               </div>
             </motion.div>
           </div>
@@ -301,16 +363,22 @@ const Portfolio = () => {
               Full Stack
             </button>
             <button 
-              onClick={() => setActiveTab('education')} 
-              className={`px-6 py-3 mx-2 mb-4 font-medium transition-all duration-300 ${activeTab === 'education' ? 'border-b-2 border-gray-900 text-gray-900' : 'text-gray-500 hover:text-gray-900'}`}
+              onClick={() => setActiveTab('blockchain')} 
+              className={`px-6 py-3 mx-2 mb-4 font-medium transition-all duration-300 ${activeTab === 'blockchain' ? 'border-b-2 border-gray-900 text-gray-900' : 'text-gray-500 hover:text-gray-900'}`}
             >
-              Education
+              Blockchain
             </button>
             <button 
-              onClick={() => setActiveTab('finance')} 
-              className={`px-6 py-3 mx-2 mb-4 font-medium transition-all duration-300 ${activeTab === 'finance' ? 'border-b-2 border-gray-900 text-gray-900' : 'text-gray-500 hover:text-gray-900'}`}
+              onClick={() => setActiveTab('exchange')} 
+              className={`px-6 py-3 mx-2 mb-4 font-medium transition-all duration-300 ${activeTab === 'exchange' ? 'border-b-2 border-gray-900 text-gray-900' : 'text-gray-500 hover:text-gray-900'}`}
             >
-              Finance
+              Exchanges
+            </button>
+            <button 
+              onClick={() => setActiveTab('nft')} 
+              className={`px-6 py-3 mx-2 mb-4 font-medium transition-all duration-300 ${activeTab === 'nft' ? 'border-b-2 border-gray-900 text-gray-900' : 'text-gray-500 hover:text-gray-900'}`}
+            >
+              NFTs
             </button>
           </motion.div>
           
@@ -382,134 +450,165 @@ const Portfolio = () => {
         </div>
       </section>
 
+   
+     
+
       {/* Skills Section - More refined */}
       <section id="skills" className="py-24 bg-white">
-        <div className="container mx-auto px-6">
-          <motion.div
-            className="text-center mb-16"
-            initial="hidden"
-            animate={isVisible['skills'] ? "visible" : "hidden"}
-            variants={fadeInUp}
-          >
-            <h2 className="text-4xl font-bold mb-4 text-gray-900">Technical Expertise</h2>
-            <div className="w-24 h-px bg-gray-400 mx-auto mb-8"></div>
-            <p className="max-w-2xl mx-auto text-gray-600">
-              Core technologies and methodologies utilized in my professional development work.
-            </p>
-          </motion.div>
-          
-          <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
-            initial="hidden"
-            animate={isVisible['skills'] ? "visible" : "hidden"}
-            variants={staggerContainer}
-          >
-            <motion.div 
-              className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
-              variants={fadeInUp}
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold mb-3 text-gray-900">MongoDB</h3>
-              <p className="text-gray-600">NoSQL database architecture</p>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
-              variants={fadeInUp}
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold mb-3 text-gray-900">Express.js</h3>
-              <p className="text-gray-600">Server-side framework</p>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
-              variants={fadeInUp}
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold mb-3 text-gray-900">React.js</h3>
-              <p className="text-gray-600">Frontend component library</p>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
-              variants={fadeInUp}
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold mb-3 text-gray-900">Node.js</h3>
-              <p className="text-gray-600">JavaScript runtime</p>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
-              variants={fadeInUp}
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold mb-3 text-gray-900">Tailwind CSS</h3>
-              <p className="text-gray-600">Utility-first framework</p>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
-              variants={fadeInUp}
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold mb-3 text-gray-900">JavaScript</h3>
-              <p className="text-gray-600">Programming languages</p>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
-              variants={fadeInUp}
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold mb-3 text-gray-900">RESTful APIs</h3>
-              <p className="text-gray-600">API architecture</p>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
-              variants={fadeInUp}
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold mb-3 text-gray-900">Responsive Design</h3>
-              <p className="text-gray-600">Device-agnostic interfaces</p>
-            </motion.div>
-          </motion.div>
+  <div className="container mx-auto px-6">
+    <motion.div
+      className="text-center mb-16"
+      initial="hidden"
+      animate={isVisible['skills'] ? "visible" : "hidden"}
+      variants={fadeInUp}
+    >
+      <h2 className="text-4xl font-bold mb-4 text-gray-900">Technical Expertise</h2>
+      <div className="w-24 h-px bg-gray-400 mx-auto mb-8"></div>
+      <p className="max-w-2xl mx-auto text-gray-600">
+        Core technologies and methodologies utilized in my professional development work.
+      </p>
+    </motion.div>
+    
+    <motion.div 
+      className="grid grid-cols-2 md:grid-cols-4 gap-8"
+      initial="hidden"
+      animate={isVisible['skills'] ? "visible" : "hidden"}
+      variants={staggerContainer}
+    >
+      <motion.div 
+        className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
+        variants={fadeInUp}
+      >
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+          </svg>
         </div>
-      </section>
+        <h3 className="text-lg font-bold mb-3 text-gray-900">MongoDB</h3>
+        <p className="text-gray-600">NoSQL database architecture</p>
+      </motion.div>
+      
+      <motion.div 
+        className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
+        variants={fadeInUp}
+      >
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+          </svg>
+        </div>
+        <h3 className="text-lg font-bold mb-3 text-gray-900">Express.js</h3>
+        <p className="text-gray-600">Server-side framework</p>
+      </motion.div>
+      
+      <motion.div 
+        className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
+        variants={fadeInUp}
+      >
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h3 className="text-lg font-bold mb-3 text-gray-900">React.js</h3>
+        <p className="text-gray-600">Frontend component library</p>
+      </motion.div>
+      
+      <motion.div 
+        className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
+        variants={fadeInUp}
+      >
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <h3 className="text-lg font-bold mb-3 text-gray-900">Node.js</h3>
+        <p className="text-gray-600">JavaScript runtime</p>
+      </motion.div>
+      
+      <motion.div 
+        className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
+        variants={fadeInUp}
+      >
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h3 className="text-lg font-bold mb-3 text-gray-900">Tailwind CSS</h3>
+        <p className="text-gray-600">Utility-first framework</p>
+      </motion.div>
+      
+      <motion.div 
+        className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
+        variants={fadeInUp}
+      >
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+        </div>
+        <h3 className="text-lg font-bold mb-3 text-gray-900">JavaScript</h3>
+        <p className="text-gray-600">Programming languages</p>
+      </motion.div>
+      
+      <motion.div 
+        className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
+        variants={fadeInUp}
+      >
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+          </svg>
+        </div>
+        <h3 className="text-lg font-bold mb-3 text-gray-900">RESTful APIs</h3>
+        <p className="text-gray-600">API architecture</p>
+      </motion.div>
+      
+      <motion.div 
+        className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
+        variants={fadeInUp}
+      >
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h3 className="text-lg font-bold mb-3 text-gray-900">Responsive Design</h3>
+        <p className="text-gray-600">Device-agnostic interfaces</p>
+      </motion.div>
+      
+      {/* New Blockchain expertise card */}
+      <motion.div 
+        className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
+        variants={fadeInUp}
+      >
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+          </svg>
+        </div>
+        <h3 className="text-lg font-bold mb-3 text-gray-900">Blockchain</h3>
+        <p className="text-gray-600">Distributed ledger technology</p>
+      </motion.div>
+      
+      {/* New NFT expertise card */}
+      <motion.div 
+        className="bg-white rounded-none p-8 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-t border-gray-200"
+        variants={fadeInUp}
+      >
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 text-gray-800 rounded-full mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h3 className="text-lg font-bold mb-3 text-gray-900">NFT</h3>
+        <p className="text-gray-600">Non-fungible token development</p>
+      </motion.div>
+    </motion.div>
+  </div>
+</section>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8">
